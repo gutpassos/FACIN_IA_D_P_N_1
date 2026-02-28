@@ -1,4 +1,4 @@
-# Especificação do Projeto FACIN_IA
+# Especificação do Projeto FACIN_IA_D_P_N_1
 
 ## Informações de Validação
 
@@ -9,13 +9,13 @@ Este arquivo é obrigatoriamente validado pelo GitHub Actions em cada push/pull 
 ```json
 {
     "project": {
-        "name": "FACIN_IA",
+        "name": "FACIN_IA_D_P_N_1",
         "version": "1.0.0",
         "maturity_level": 1,
         "description": "Sistema Inteligente Multi-Agentes para Automação de Folha de Pagamento",
         "author": "Guttenberg Ferreira Passos",
         "email": "gut.passos@gmail.com",
-        "repository": "https://github.com/gutpassos/FACIN_IA",
+        "repository": "https://github.com/gutpassos/FACIN_IA_D_P_N_1",
         "license": "Prodemge"
     },
     "technology_stack": {

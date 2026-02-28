@@ -56,13 +56,13 @@ agenticops:
   # Configurações de sessão
   session:
     auto_session: true
-    session_name: FACIN_IA
+    session_name: FACIN_IA_D_P_N_1
     session_timeout_minutes: 60
     auto_flush_interval_seconds: 30
   
   # Dados personalizados
   metadata:
-    project_name: FACIN_IA
+    project_name: FACIN_IA_D_P_N_1
     environment: development
     version: 1.0.0
     maturity_level: 1
@@ -81,7 +81,7 @@ cicd:
   # Integração com repositório
   repository:
     owner: gutpassos
-    name: FACIN_IA
+    name: FACIN_IA_D_P_N_1
     branch: main
   
   # Configurações de deploy

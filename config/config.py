@@ -1,5 +1,5 @@
 """
-Configuração centralizada do projeto FACIN_IA
+Configuração centralizada do projeto FACIN_IA_D_P_N_1
 """
 
 import os
@@ -63,7 +63,7 @@ ENABLE_ANALYSIS_AGENT: bool = True
 # ==========================================
 
 AGENTICOPS_ENABLED: bool = AGENTICOPS_API_KEY is not None
-AGENTICOPS_PROJECT_NAME: str = "FACIN_IA"
+AGENTICOPS_PROJECT_NAME: str = "FACIN_IA_D_P_N_1"
 AGENTICOPS_ENVIRONMENT: str = "development" if DEBUG else "production"
 AGENTICOPS_LOG_DIR: str = "logs"
 
