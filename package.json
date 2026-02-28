@@ -1,0 +1,18 @@
+{
+    "env": "development",
+    "test": "pytest --cov=. --cov-report=html --cov-report=term",
+    "format": "black . --line-length=100",
+    "format:check": "black --check . --line-length=100",
+    "lint": "flake8 . --statistics",
+    "type:check": "mypy . --ignore-missing-imports",
+    "sort:imports": "isort . --profile black",
+    "sort:imports:check": "isort --check-only . --profile black",
+    "quality": "pylint **/*.py --disable=all --enable=E,F",
+    "complexity": "radon cc . -a",
+    "maintainability": "radon mi . -s",
+    "clean": "find . -type d -name __pycache__ -exec rm -rf {} +; find . -name '*.pyc' -delete; rm -rf .pytest_cache .mypy_cache .coverage htmlcov/",
+    "docs": "python -m sphinx -b html docs/ docs/generated/",
+    "setup": "pip install -r requirements.txt && pip install -r requirements-dev.txt",
+    "validate": "python -c \"from config.config import validate_config; validate_config()\"",
+    "validate:specs": "python -c \"import json; spec = json.load(open('spec.json')); print('✓ Especificação válida')\""
+}

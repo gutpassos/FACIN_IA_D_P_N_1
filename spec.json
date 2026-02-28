@@ -1,0 +1,346 @@
+# Especificação do Projeto FACIN_IA
+
+## Informações de Validação
+
+Este arquivo é obrigatoriamente validado pelo GitHub Actions em cada push/pull request.
+
+## Especificação Técnica
+
+```json
+{
+    "project": {
+        "name": "FACIN_IA",
+        "version": "1.0.0",
+        "maturity_level": 1,
+        "description": "Sistema Inteligente Multi-Agentes para Automação de Folha de Pagamento",
+        "author": "Gustavo Passos",
+        "email": "gut.passos@gmail.com",
+        "repository": "https://github.com/gutpassos/FACIN_IA",
+        "license": "MIT"
+    },
+    "technology_stack": {
+        "language": "Python",
+        "version": "3.10+",
+        "frameworks": [
+            {
+                "name": "Streamlit",
+                "version": ">=1.28.0",
+                "purpose": "Web UI Framework"
+            },
+            {
+                "name": "LangChain",
+                "version": ">=0.3.24",
+                "purpose": "LLM Orchestration"
+            },
+            {
+                "name": "LangGraph",
+                "version": ">=0.3.34",
+                "purpose": "Multi-Agent Orchestration"
+            },
+            {
+                "name": "Groq",
+                "version": ">=0.23.1",
+                "purpose": "LLM Provider (Mixtral)"
+            },
+            {
+                "name": "OpenAI",
+                "version": ">=1.76.0",
+                "purpose": "LLM Provider (GPT-4)"
+            }
+        ],
+        "databases": [
+            {
+                "type": "SQLite",
+                "primary": true,
+                "tables": [
+                    "servidores",
+                    "folha_pagamento",
+                    "departamentos"
+                ]
+            },
+            {
+                "type": "Access DB",
+                "legacy": true,
+                "migration_planned": true
+            }
+        ],
+        "deployment": {
+            "web_framework": "Streamlit",
+            "ci_cd": "GitHub Actions",
+            "monitoring": "AgenticOps",
+            "environment": "Docker-ready"
+        }
+    },
+    "modules": [
+        {
+            "name": "app.py",
+            "type": "main",
+            "purpose": "Aplicação principal com Streamlit e LangGraph",
+            "dependencies": [
+                "streamlit",
+                "langchain",
+                "langchain-groq",
+                "langchain-openai",
+                "langgraph",
+                "sqlite3"
+            ],
+            "key_components": [
+                "ConversationState TypedDict",
+                "Agent nodes and edges",
+                "Tool definitions",
+                "Streamlit UI components"
+            ]
+        },
+        {
+            "name": "cria_db.py",
+            "type": "utility",
+            "purpose": "Criar e popular banco de dados SQLite",
+            "dependencies": [
+                "sqlite3",
+                "pandas"
+            ],
+            "functions": [
+                "create_database()",
+                "populate_from_csv()"
+            ]
+        }
+    ],
+    "features": {
+        "core": [
+            {
+                "name": "Multi-Agent System",
+                "status": "implemented",
+                "agents": [
+                    "Router Agent",
+                    "Database Agent",
+                    "Analysis Agent",
+                    "Memory Agent",
+                    "Tool Executor"
+                ]
+            },
+            {
+                "name": "Conversational Interface",
+                "status": "implemented",
+                "technology": "Streamlit Chat"
+            },
+            {
+                "name": "Database Integration",
+                "status": "implemented",
+                "databases": [
+                    "SQLite",
+                    "Access DB"
+                ]
+            },
+            {
+                "name": "Context Management",
+                "status": "implemented",
+                "methods": [
+                    "State management",
+                    "Memory buffer"
+                ]
+            }
+        ],
+        "monitoring": [
+            {
+                "name": "AgenticOps Integration",
+                "status": "configured",
+                "level": "maturity_1"
+            },
+            {
+                "name": "Error Tracking",
+                "status": "implemented"
+            },
+            {
+                "name": "Performance Monitoring",
+                "status": "implemented"
+            }
+        ],
+        "ci_cd": [
+            {
+                "name": "GitHub Actions",
+                "status": "configured",
+                "workflows": [
+                    "validate.yml"
+                ],
+                "python_versions": [
+                    "3.10",
+                    "3.11",
+                    "3.12"
+                ]
+            },
+            {
+                "name": "Specification Validation",
+                "status": "mandatory",
+                "file": "spec.json"
+            }
+        ]
+    },
+    "directory_structure": {
+        "root": {
+            "app.py": "Main application",
+            "cria_db.py": "Database setup",
+            "requirements.txt": "Dependencies",
+            "spec.json": "This specification (REQUIRED)"
+        },
+        "docs": {
+            "README.md": "Project documentation",
+            "API.md": "API reference",
+            "ARCHITECTURE.md": "System architecture",
+            "generated": "Auto-generated docs"
+        },
+        "errors": {
+            "ERRORS_LOG.md": "Error tracking and solutions"
+        },
+        ".github": {
+            "workflows": {
+                "validate.yml": "CI/CD pipeline"
+            }
+        },
+        ".vscode": {
+            "settings.json": "VSCode configuration",
+            "extensions.json": "Recommended extensions"
+        },
+        "config": {
+            "agenticops_config.yaml": "AgenticOps configuration",
+            "vscode_copilot_settings.json": "Copilot settings"
+        }
+    },
+    "requirements": {
+        "python": {
+            "minimum_version": "3.10",
+            "recommended_version": "3.12"
+        },
+        "dependencies_count": 50,
+        "critical_packages": [
+            "langchain",
+            "langgraph",
+            "streamlit"
+        ]
+    },
+    "quality_standards": {
+        "code_formatting": {
+            "tool": "Black",
+            "line_length": 100,
+            "required": true
+        },
+        "import_sorting": {
+            "tool": "isort",
+            "profile": "black",
+            "required": true
+        },
+        "linting": {
+            "tool": "Flake8",
+            "required": true
+        },
+        "type_checking": {
+            "tool": "mypy",
+            "required": true,
+            "ignore_missing_imports": true
+        },
+        "testing": {
+            "framework": "pytest",
+            "minimum_coverage": 70,
+            "required": true
+        }
+    },
+    "maturity_level": {
+        "current": 1,
+        "description": "Basic production setup with core features",
+        "characteristics": [
+            "Single instance deployment",
+            "Basic error handling",
+            "Manual scaling",
+            "Development-focused monitoring",
+            "Essential features implemented"
+        ],
+        "next_level": {
+            "target": 2,
+            "improvements": [
+                "Multi-instance deployment",
+                "Advanced error recovery",
+                "Auto-scaling capability",
+                "Production monitoring",
+                "Performance optimization"
+            ]
+        }
+    },
+    "vscode_integration": {
+        "extensions": [
+            "ms-python.python",
+            "ms-python.vscode-pylance",
+            "GitHub.Copilot",
+            "GitHub.Copilot-Chat"
+        ],
+        "settings_file": "config/vscode_copilot_settings.json",
+        "copilot_enabled": true,
+        "agents_enabled": true
+    },
+    "ci_cd_pipeline": {
+        "trigger": [
+            "push to main/develop",
+            "pull requests"
+        ],
+        "validation_steps": [
+            {
+                "name": "Specification Validation",
+                "mandatory": true,
+                "fail_on_error": true
+            },
+            {
+                "name": "Code Quality",
+                "tools": [
+                    "black",
+                    "isort",
+                    "flake8",
+                    "mypy"
+                ],
+                "fail_on_error": false
+            },
+            {
+                "name": "Testing",
+                "tool": "pytest",
+                "coverage_requirement": 70,
+                "fail_on_error": true
+            },
+            {
+                "name": "Build",
+                "documentation": true,
+                "artifacts": true
+            }
+        ]
+    },
+    "agenticops_integration": {
+        "enabled": true,
+        "maturity_level": 1,
+        "features": [
+            "Event logging",
+            "Error tracking",
+            "Performance monitoring",
+            "Session management",
+            "LangChain integration",
+            "LangGraph integration"
+        ],
+        "configuration_file": "config/agenticops_config.yaml"
+    },
+    "validation": {
+        "specification_version": "1.0.0",
+        "last_validated": "2026-02-27",
+        "status": "valid",
+        "schema_version": "1.0"
+    }
+}
+```
+
+---
+
+## Notas Importantes
+
+1. **Validação Obrigatória**: Este arquivo é validado automaticamente pelo GitHub Actions
+2. **Formato**: JSON válido é obrigatório
+3. **Versão**: Deve corresponder à versão do projeto em `app.py`
+4. **Atualização**: Deve ser atualizado sempre que o projeto evolui
+
+---
+
+**Data de Criação**: 27/02/2026  
+**Versão**: 1.0.0

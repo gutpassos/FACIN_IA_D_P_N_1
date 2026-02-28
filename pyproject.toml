@@ -1,0 +1,47 @@
+# Configuração para Pytest
+
+[pytest]
+testpaths = tests
+python_files = test_*.py
+python_classes = Test*
+python_functions = test_*
+addopts = 
+    -v
+    --strict-markers
+    --tb=short
+    --disable-warnings
+    --cov=.
+    --cov-report=term-missing
+    --cov-report=html
+    --cov-fail-under=70
+    --maxfail=1
+
+markers =
+    unit: Testes unitários rápidos
+    integration: Testes de integração
+    slow: Testes mais lentos
+    db: Testes que acessam banco de dados
+    agent: Testes de agentes IA
+    asyncio: Testes assincronos
+
+testpaths = tests
+
+# Configuração de cobertura
+[coverage:run]
+source = .
+omit =
+    */tests/*
+    */test_*.py
+    */__pycache__/*
+    */.venv/*
+    */venv/*
+
+[coverage:report]
+exclude_lines =
+    pragma: no cover
+    def __repr__
+    raise AssertionError
+    raise NotImplementedError
+    if __name__ == .__main__.:
+    if TYPE_CHECKING:
+    @abstractmethod

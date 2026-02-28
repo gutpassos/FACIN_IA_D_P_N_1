@@ -1,0 +1,109 @@
+# Configuração do AgenticOps - Nível de Maturidade 1
+# Monitoramento e observabilidade para agentes de IA
+
+agenticops:
+  enabled: true
+  # Chave API - defina em variáveis de ambiente
+  api_key: ${AGENTICOPS_API_KEY}
+  
+  # Configurações de logging
+  logging:
+    level: INFO
+    format: json
+    console_output: true
+    file_output: true
+    log_file: logs/agenticops.log
+  
+  # Rastreamento de execução
+  tracking:
+    enabled: true
+    track_events: true
+    track_errors: true
+    track_performance: true
+    track_memory: true
+  
+  # Configurações de performance
+  performance:
+    monitor_latency: true
+    monitor_memory: true
+    monitor_cpu: true
+    alert_on_threshold: true
+    latency_threshold_ms: 5000
+    memory_threshold_mb: 512
+  
+  # Configurações de integração
+  integrations:
+    langchain:
+      enabled: true
+      track_llm_calls: true
+      track_tool_calls: true
+    langgraph:
+      enabled: true
+      track_state_transitions: true
+    openai:
+      enabled: true
+    groq:
+      enabled: true
+  
+  # Configurações de erro
+  error_handling:
+    capture_errors: true
+    capture_exceptions: true
+    send_to_server: true
+    local_storage: true
+    error_dir: errors
+  
+  # Configurações de sessão
+  session:
+    auto_session: true
+    session_name: FACIN_IA
+    session_timeout_minutes: 60
+    auto_flush_interval_seconds: 30
+  
+  # Dados personalizados
+  metadata:
+    project_name: FACIN_IA
+    environment: development
+    version: 1.0.0
+    maturity_level: 1
+    team: gutpassos
+
+# Configurações de CI/CD
+cicd:
+  enabled: true
+  provider: github_actions
+  
+  # Webhooks
+  webhooks:
+    enabled: true
+    log_events: true
+  
+  # Integração com repositório
+  repository:
+    owner: gutpassos
+    name: FACIN_IA
+    branch: main
+  
+  # Configurações de deploy
+  deployment:
+    auto_deploy: false
+    environments:
+      - development
+      - staging
+      - production
+
+# Configurações de especificação
+specification:
+  enabled: true
+  validation:
+    required: true
+    on_commit: true
+    on_pr: true
+  
+  specification_files:
+    - "spec.json"
+    - "*_spec.json"
+  
+  schema:
+    enforce_schema: true
+    strict_mode: true

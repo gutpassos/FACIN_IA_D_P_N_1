@@ -1,0 +1,48 @@
+version: "3.9"
+
+services:
+  facin-ia:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    
+    container_name: facin-ia-app
+    
+    ports:
+      - "8501:8501"
+    
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - GROQ_API_KEY=${GROQ_API_KEY}
+      - AGENTICOPS_API_KEY=${AGENTICOPS_API_KEY}
+      - DATABASE_PATH=/app/data/folha_pagamento.db
+      - PYTHONPATH=/app
+      - DEBUG=false
+      - LOG_LEVEL=INFO
+    
+    volumes:
+      - ./data:/app/data
+      - ./logs:/app/logs
+      - ./errors:/app/errors
+    
+    restart: unless-stopped
+    
+    healthcheck:
+      test: ["CMD", "python", "-c", "import sqlite3; sqlite3.connect('/app/data/folha_pagamento.db')"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
+    
+    networks:
+      - facin-network
+    
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+networks:
+  facin-network:
+    driver: bridge

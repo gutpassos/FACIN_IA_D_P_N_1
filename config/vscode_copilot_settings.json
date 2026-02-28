@@ -1,0 +1,38 @@
+{
+    "github.copilot.enable": {
+        "yaml": true,
+        "plaintext": false,
+        "markdown": true,
+        "python": true,
+        "javascript": true,
+        "typescript": true,
+        "json": true,
+        "jsonc": true
+    },
+    "github.copilot.advanced": {
+        "debug.overrideEngine": "gpt-4",
+        "debug.testOverrideProxyUrl": "https://api.github.com",
+        "debug.removeSurroundingRegionMarkers": false
+    },
+    "github.copilot.chat.localeOverride": "pt-br",
+    "github.copilot.chat.enabled": true,
+    "github.copilot.chat.experiments.enabled": true,
+    "copilot.advanced": {
+        "inlineSuggestionCount": 3,
+        "authorizationFallback": true
+    },
+    "github.copilot.codeCompletion.enabled": true,
+    "github.copilot.chat.codeGeneration.enabled": true,
+    "copilot.language.python": {
+        "enabled": true,
+        "settings": {
+            "maxCompletions": 5,
+            "model": "gpt-4"
+        }
+    },
+    "copilot.virtualEnvironments.installed": [
+        "${workspaceFolder}/.venv"
+    ],
+    "copilot.voice.enabled": false,
+    "copilot.advanced.deepSeek": false
+}

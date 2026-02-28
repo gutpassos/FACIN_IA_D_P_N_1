@@ -1,0 +1,101 @@
+# Projeto 7 - Gerenciamento de Memória e Contexto - Sistema de Multi-Agentes de IA com LangGraph Para Automação do CRM e Consulta a Banco de Dados - Cap19_v4
+
+# Abra o terminal ou prompt de comando, navegue até a pasta com os arquivos e execute o comando abaixo para criar um ambiente virtual:
+
+conda create --name dsap7 python=3.12
+
+# Ative o ambiente:
+
+conda activate dsap7 (ou: source activate dsap7)
+
+# Instale o pip e as dependências:
+
+conda install pip
+pip install -r requirements.txt 
+
+# Execute os scripts:
+
+python dsa_cria_db.py
+streamlit run app.py
+
+# Exemplos:
+
+- Quais servidores estão ativos?
+- Quantos servidores estão ativos?
+- Qual é a remuneração do Servidor 2?
+- Quantos servidores ocupam o cargo de Assistente?
+- Quantos servidores são da Secretaria da Saúde?
+- Na Fazenda, quantos ervidores cupam o cargo de Assistente?
+- Quantos servidores tiveram aumento?
+- Algum servidores foram demitidos? Quais?
+- Qual é o valor da folha da fazenda em 202401?
+- Qual é o valor da folha da saude no ano de 2024?
+- Faça uma simulação da folha de pagamento da saúde para maio de 2024
+- Qual é o valor total da folha de pagamento da secretaria da fazenda no ano de 2024?
+- Qual seria o valor da folha da secretaria da fazenda em 2024 se houvesse um aumento de 10% no vencimento dos servidores?
+
+
+
+
+Perguntas para conversa com a folha:
+- Qual o valor da folha de pagamento para um órgão no mês MM/AAAA?  
+- Qual o valor da folha de pagamento para a carreira NNNNNNNNNNNNN no mês MM/AAAA?  
+
+
+Perguntas para projeção da folha
+- Qual o impacto nos próximos 2 a 5 anos na folha de pagamento do Estado se for aplicado um reajuste de x% para a carreira de Auditor Fiscal da Fazenda Estadual?
+- Qual o impacto no próximo ano fiscal se for praticado um reajuste de x% para a carreira de Professor de Educação Básica do Estado?  
+- Qual a projeção da Receita Corrente Líquida (RCL) para os próximos 3 a 5 anos?  
+- Qual o percentual atual da despesa com pessoal em relação à RCL e qual a meta de médio e longo prazo para esse indicador, considerando a sustentabilidade fiscal?  
+- Caso uma ação judicial que aumenta o salário dos médicos do Estado seja exitosa e represente um aumento em x% do salário, qual o impacto na folha de pagamento da SEPLAG e da FHEMIG nos próximos 2 a 5 anos?  
+- Qual o impacto na folha caso o Estado tenha que arcar com pensões especiais de pessoas impactadas pela tragédia de Mariana (estima-se um volume de 500 pessoas impactadas) baseando-se nas pensões pagas atualmente pelo acidente ocorrido no Parque da Gameleira?  
+- Qual o impacto financeiro de eventuais reestruturações de carreiras ou planos de cargos e salários que estão em discussão ou planejamento?  
+- Qual a projeção de impacto na folha de 2026 se 80% dos servidores tiverem avaliação de desempenho de 100% no ano de 2025?  
+- Tomando por base o ganho de causas judiciais por parte dos servidores estaduais no ano de 2025, qual o impacto projetado para o ano de 2026? 
+- Qual o número estimado de servidores elegíveis para progressões de carreira (horizontal - graus) e promoção (verticais - níveis) nos próximos 3 a 5 anos?
+
+
+
+# Use os comandos abaixo para desativar o ambiente virtual e remover o ambiente (opcional):
+
+conda deactivate
+conda remove --name dsap7 --all
+
+
+Streamlit App URL
+chatfolha-gp4chli5wpb4rfutyxx6zj
+https://chatfolha-gp4chli5wpb4rfutyxx6zj.streamlit.app/
+
+
+
+GROQ_API_KEY=
+
+
+OPENAI_API_KEY=
+
+
+
+
+Se você fez o upload dos arquivos diretamente pela interface do site do GitHub (ou via comando push), o Streamlit Cloud deve, em teoria, atualizar sua aplicação automaticamente.
+
+Aqui está como verificar se a atualização funcionou ou o que fazer se ela estiver "travada":
+
+1. Verifique o "Deploy" Automático
+Ao entrar na URL da sua aplicação no navegador:
+
+Olhe para o canto superior direito. Se aparecer uma mensagem como "Running..." ou um ícone de carregamento, o Streamlit já percebeu a mudança no GitHub e está reinstalando os arquivos.
+
+Pressione Ctrl + F5 (ou Cmd + Shift + R no Mac) para limpar o cache do navegador e garantir que você não está vendo uma versão antiga salva no seu computador.
+
+2. O que fazer se não atualizar sozinho?
+Às vezes, a conexão entre o GitHub e o Streamlit Cloud pode demorar alguns minutos. Se nada mudar, siga estes passos:
+
+Acesse o seu Dashboard do Streamlit Cloud.
+https://streamlit.io/cloud
+Join Community Cloud 
+
+Localize o seu app na lista.  => gutpassos' apps => chatfolha ∙ main ∙ app.py
+
+Clique nos três pontinhos (...) ao lado do nome do app.
+
+Selecione Reboot app. Isso forçará o servidor a baixar a versão mais recente do seu código no GitHub e reinstalar tudo.
