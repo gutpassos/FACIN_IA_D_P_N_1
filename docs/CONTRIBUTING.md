@@ -1,6 +1,6 @@
-# Guia de Contribuição - FACIN_IA
+# Guia de Contribuição - FACIN_IA_D_P_N_1
 
-## 🤝 Contribuindo para FACIN_IA
+## 🤝 Contribuindo para FACIN_IA_D_P_N_1
 
 Obrigado por se interessar em contribuir! Este guia descreve nossos padrões e processos.
 
@@ -9,7 +9,7 @@ Obrigado por se interessar em contribuir! Este guia descreve nossos padrões e p
 ## 📋 Antes de Começar
 
 - Faça um Fork do repositório
-- Clone seu fork: `git clone https://github.com/seu-usuario/FACIN_IA.git`
+- Clone seu fork: `git clone https://github.com/seu-usuario/FACIN_IA_D_P_N_1.git`
 - Crie uma branch: `git checkout -b feature/sua-feature`
 
 ---
@@ -207,7 +207,7 @@ Passos para reproduzir/testar
 ### Informações Necessárias
 ```
 - Versão Python
-- Versão do FACIN_IA
+- Versão do FACIN_IA_D_P_N_1
 - Stack trace completo
 - Passos para reproduzir
 - Comportamento esperado vs atual
@@ -232,7 +232,7 @@ Passos para reproduzir/testar
 **Environment**
 - Python: 3.12
 - OS: Windows/Linux/macOS
-- FACIN_IA Version: 1.0.0
+- FACIN_IA_D_P_N_1 Version: 1.0.0
 ```
 
 ---

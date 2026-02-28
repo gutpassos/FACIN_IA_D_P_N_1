@@ -1,4 +1,4 @@
-# Resumo da Estrutura Implementada - FACIN_IA
+# Resumo da Estrutura Implementada - FACIN_IA_D_P_N_1
 
 ## ✅ Etapa 1: Criação de Pastas
 
@@ -367,6 +367,6 @@ Para dúvidas ou problemas:
 ---
 
 **Data de Conclusão**: 27/02/2026  
-**Versão do FACIN_IA**: 1.0.0  
+**Versão do FACIN_IA_D_P_N_1**: 1.0.0  
 **Nível de Maturidade**: 1  
 **Status**: ✅ Pronto para Uso

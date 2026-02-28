@@ -1,8 +1,8 @@
-# FACIN_IA - Documentação do Projeto
+# FACIN_IA_D_P_N_1 - Documentação do Projeto
 
 ## 📋 Visão Geral
 
-**FACIN_IA** é um Sistema Inteligente de Gerenciamento Multi-Agentes baseado em:
+**FACIN_IA_D_P_N_1** é um Sistema Inteligente de Gerenciamento Multi-Agentes baseado em:
 - **LangChain + LangGraph**: Orquestração de multi-agentes de IA
 - **Streamlit**: Interface web interativa
 - **Groq + OpenAI**: Modelos de linguagem
@@ -32,7 +32,7 @@ Sistema de automação de folha de pagamento com:
 ## 📁 Estrutura do Projeto
 
 ```
-FACIN_IA/
+FACIN_IA_D_P_N_1/
 ├── app.py                      # Aplicação principal Streamlit
 ├── cria_db.py                  # Script de criação do banco de dados
 ├── requirements.txt            # Dependências Python

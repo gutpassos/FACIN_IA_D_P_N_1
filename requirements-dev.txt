@@ -1,4 +1,4 @@
-# Dependências de Desenvolvimento para FACIN_IA
+# Dependências de Desenvolvimento para FACIN_IA_D_P_N_1
 
 # Testing
 pytest>=7.4.0

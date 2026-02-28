@@ -1,8 +1,8 @@
-# API Reference - FACIN_IA
+# API Reference - FACIN_IA_D_P_N_1
 
-## Visão Geral
+## 📚 Visão Geral
 
-Este documento contém a referência completa das funções, classes e módulos disponíveis no projeto FACIN_IA.
+Este documento contém a referência completa das funções, classes e módulos disponíveis no projeto FACIN_IA_D_P_N_1.
 
 ---
 
@@ -431,7 +431,7 @@ from agenticops import AgenticOps
 
 ops = AgenticOps(
     api_key=os.getenv("AGENTICOPS_API_KEY"),
-    project_name="FACIN_IA"
+    project_name="FACIN_IA_D_P_N_1"
 )
 ```
 
@@ -497,7 +497,7 @@ Arquivo de especificação obrigatório em JSON:
 ```json
 {
     "version": "1.0.0",
-    "name": "FACIN_IA",
+    "name": "FACIN_IA_D_P_N_1",
     "description": "Sistema Inteligente Multi-Agentes",
     "modules": [
         {

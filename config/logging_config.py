@@ -1,4 +1,4 @@
-# Configuração de Logging para FACIN_IA
+# Configuração de Logging para FACIN_IA_D_P_N_1
 
 import logging
 import logging.handlers
