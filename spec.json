@@ -13,10 +13,10 @@ Este arquivo é obrigatoriamente validado pelo GitHub Actions em cada push/pull 
         "version": "1.0.0",
         "maturity_level": 1,
         "description": "Sistema Inteligente Multi-Agentes para Automação de Folha de Pagamento",
-        "author": "Gustavo Passos",
+        "author": "Guttenberg Ferreira Passos",
         "email": "gut.passos@gmail.com",
         "repository": "https://github.com/gutpassos/FACIN_IA",
-        "license": "MIT"
+        "license": "Prodemge"
     },
     "technology_stack": {
         "language": "Python",

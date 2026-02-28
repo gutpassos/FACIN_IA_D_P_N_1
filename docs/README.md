@@ -274,7 +274,7 @@ Este projeto está sob a licença MIT.
 
 ## 👤 Autor
 
-**Gustavo Passos**
+**Guttenberg Ferreira Passos**
 - GitHub: [@gutpassos](https://github.com/gutpassos)
 - Email: gut.passos@gmail.com
 - Projeto: [https://github.com/gutpassos/FACIN_IA](https://github.com/gutpassos/FACIN_IA)
